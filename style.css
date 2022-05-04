@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh ;
+    width: 100vw;
+    background-image: linear-gradient(to right, #6ca59a 40%,  #fafafa 40%);
+}
+
+#main {
+    width: 90rem;
+    height: 48rem;
+    padding: 5rem;
+
+    background: #ffffff;
+    filter: drop-shadow(3px 3px 7px rgba(25, 21, 21, 0.31));
+}
+
+
+
+#header {
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    margin-top: -1rem;
+}
+
+#logo span {
+    font-size: 3rem;
+    cursor: default;
+}
+
+#header .navigation ul {
+    display: flex;
+    font-size: 1.3rem;
+}
+
+#header .navigation ul li a {
+    color: #252525;
+    margin-left: 3rem;
+}
+
+#header .navigation ul li a:hover {
+    color: #6ca59a;
+    border-bottom: 3px solid;
+    border-color: #6ca59a;
+    cursor: default;
+}
+
+#devices-list {
+    flex-direction: column;
+    display: none;
+    padding: .5rem;
+    width: 12rem;
+    height: 13rem;
+    background: #f3f3f3;
+    filter: drop-shadow(3px 3px 7px rgba(25, 21, 21, 0.31));
+    position: absolute;
+    top: 7rem;
+    left: 71.2rem;
+    z-index: 2;
+    border-radius: .2rem;
+}
+
+#devices-list.open{
+    display: flex;
+}
+
+
+#devices-list p {
+    font-size: .9rem;
+    cursor: default;
+}
+
+#devices-list p:hover {
+    color: #444444;
+    cursor: default;
+}
+
+#phone-image {
+   width: 30rem;
+   height:35rem;
+   background: url('assets/m52-5g/m52.svg');
+   background-position-x: -8.6rem;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-size:cover;
+   background-clip: content-box;
+   margin-left: -2rem;
+   margin-top: 2rem;
+}
+#content h2 {
+    color: #202020;
+}
+
+#content h2:hover {
+    color: #444444;    
+    cursor: default;
+}
+#content p {
+    font-size: .9rem;
+    margin-top: 1rem;
+    color: #2c2c2c ;
+}
+
+#content p:hover {
+    cursor: default;
+    color: #464646 ;
+}
+
+#content .list{
+    display: flex;
+    flex-direction: column;
+}
+
+.tela, .chipset, .camera, .memoria, .freatures, .conexão {
+    position: absolute;
+}
+
+.tela, .chipset, .conexão {
+    top: 14rem;
+}
+
+
+.tela, .camera {
+    left: 35rem;
+}
+
+.chipset, .memoria{
+    left: 50rem;
+}
+
+.conexão, .freatures {
+    left:72rem;
+}
+
+.camera, .memoria, .freatures {
+    top:27rem;
+}
