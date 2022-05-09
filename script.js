@@ -39,8 +39,7 @@ function m52Specs() {
                                     background-size:cover;
                                     background-clip: content-box;
                                     margin-left: -2rem;
-                                    margin-top: 2rem;
-                                    transition:.5s;
+                                    margin-top: 2rem;                                  
                                      `)
     
    displaySection.innerHTML = `<h2>Display</h2>
@@ -95,7 +94,6 @@ function iphone12Specs() {
                                 background-clip: content-box;
                                 margin-left: 1rem;
                                 margin-top: 2rem;
-                                transition:.5s;
                                 `)
 
     displaySection.innerHTML = `<h2>Display</h2>
@@ -149,7 +147,6 @@ function iphone13Specs() {
                                 background-clip: content-box;
                                 margin-left: 1rem;
                                 margin-top: -5rem;
-                                transition:.5s;
                                 `)
 
     displaySection.innerHTML = `<h2>Display</h2>
@@ -191,7 +188,7 @@ function iphone13Specs() {
 }
 
 function m4proSpecs() {
-    buyLink.innerHTML = `<a href="https://www.shoptime.com.br/produto/3919412473?epar=9381&s_term=COMPARADORES&hl=lower&utm_campaign=marca%3Ashop%3Bmidia%3Acomparadores%3Bformato%3A00%3Bsubformato%3A00%3Bidcampanha%3A9381&utm_source=zoom&utm_medium=comparadores&opn=COMPARADORES&utm_content=2e8e61fa62f14d928b22a88b2caac168&franq=2e8e61fa62f14d928b22a88b2caac168&cor=Prateado">Buy</a>`
+    buyLink.innerHTML = `<a href="https://www.amazon.com.br/Poco-Smartphone-128GB-Dual-azul/dp/B09LQGJ9LZ">Buy</a>`
     phoneImage.setAttribute("style", `
                                 width: 22rem;
                                 height:30rem;
@@ -203,7 +200,6 @@ function m4proSpecs() {
                                 background-clip: content-box;
                                 margin-left: 1rem;
                                 margin-top: 4rem;
-                                transition:.5s;
                                 `)
 
     displaySection.innerHTML = `<h2>Display</h2>
@@ -238,5 +234,55 @@ function m4proSpecs() {
                                    `
 
     DeviceList.classList.remove("open") 
+
+}
+
+function a52Specs() {
+    buyLink.innerHTML = `<a href="https://www.fastshop.com.br/web/p/d/SGSMA525VLT_PRD/samsung-galaxy-a52-violeta-128gb-sm-a525mlvgzto-fast?partner=parceiro-comparador&utm_source=com_zoom&utm_medium=com&utm_campaign=PREMIUM&utm_term=SGSMA525VLT_PRD&cm_mmc=com_zoom-_-PREMIUM-_-ND-_-SGSMA525VLT_PRD&utm_content=cfc446405923492d998f268ed9f750f1">Buy</a>`
+    phoneImage.setAttribute("style", `
+                                width: 26rem;
+                                height:30rem;
+                                background: url('assets/A52/A52.png');
+                                background-position-x: 0rem;
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-size:cover;
+                                background-clip: content-box;
+                                margin-left: -1rem;
+                                margin-top: 3rem;
+                                `)
+
+    displaySection.innerHTML = `<h2>Display</h2>
+                                 <p>6.5 Polegadas</p>
+                                 <p>1080x2400px</p>
+                                 <p>Super AMOLED</p>
+                                 <p>90hz</p>
+                                `
+    chipsetSection.innerHTML = `<h2>Chipset</h2>
+                                 <p>Snapdragon 720G</p>
+                                 <p>Adreno 618</p>
+                                 <p>2x 2.3Ghz + 6x 1.8Ghz</p>
+                                 `
+    conectSection.innerHTML = `<h2>Conexão</h2>
+                                 <p>WIFI 802.11 a/b/g/n/ac/</p>
+                                 <p>Bluetooth 5.0 com A2DP/LE</p>
+                                 `
+    cameraSection.innerHTML = `<h2>Camera</h2>
+                                    <p>64Mp + 12Mp + 2x5Mp / 32Mp</p>
+                                    <p>4K(2160p)/30fps</p>
+                                    <p>HDR</p>
+                                    `
+    memoriaSection.innerHTML = `<h2>Armazenamento</h2>
+                                 <p>128GB ROM</p>
+                                 <p>6GB RAM</p>
+                                 <p>Max 1024Gb</p>
+                                 `
+    freaturesSection.innerHTML = `<h2>Freatures</h2>
+                                   <p>Face Detection</p>
+                                   <p>Bateria 4500maH</p>
+                                   `
+
+    DeviceList.classList.remove("open")                              
+
 
 }
