@@ -7,13 +7,22 @@
     font-family: "Inter", sans-serif;
 }
 
+
+:root {
+    --background-color-1:#6ca59aab;
+    --background-color-2: #d3d3d3bd;
+    --background-color-3: #f3f3f3;
+
+    --variant-color-1:#6ca59a;
+}
+
 .background {
     display: flex;
     justify-content: center;
     align-items: center;
     height:100vh ;
     width: 100vw;
-    background-image: linear-gradient(to right, #6ca59aab 40%,  #d3d3d3bd 40%);
+    background-image: linear-gradient(to right, var(--background-color-1) 40%,  var(--background-color-2) 40%);
 }
 
 #main {
@@ -54,9 +63,9 @@
 }
 
 #header .navigation ul li a:hover {
-    color: #6ca59a;
+    color: var(--variant-color-1);
     border-bottom: 3px solid;
-    border-color: #6ca59a;
+    border-color: var(--variant-color-1);
     cursor: default;
 }
 
@@ -65,16 +74,22 @@
     overflow-x: hidden;
     overflow-y: scroll;
     display: none;
+
     padding: .5rem;
     width: 12rem;
     height: 13rem;
-    background: #f3f3f3;
+    background: var(--background-color-3);
     filter: drop-shadow(3px 3px 7px rgba(25, 21, 21, 0.31));
+    
     position: absolute;
     top: 7rem;
     left: 71.2rem;
     z-index: 2;
     border-radius: .2rem;
+}
+
+#devices-list.device-off {
+    left: 76rem;
 }
 
 #devices-list.open{
@@ -92,10 +107,11 @@
     cursor: default;
 }
 
+
+
 #phone-image {
    width: 30rem;
    height:35rem;
-   background: url('assets/m52-5g/m52.svg');
    background-position-x: -8.6rem;
    background-size: contain;
    background-repeat: no-repeat;
@@ -104,6 +120,8 @@
    margin-left: -2rem;
    margin-top: 2rem;
 }
+
+
 #content h2 {
     color: #202020;
 }
@@ -135,7 +153,6 @@
 .tela, .chipset, .connection {
     top: 14rem;
 }
-
 
 .tela, .camera {
     left: 35rem;

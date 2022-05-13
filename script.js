@@ -1,7 +1,10 @@
 let DeviceList  = document.getElementById("devices-list")
 let DevicesButton = document.getElementById("Devices")
+let buyLink = document.getElementById("Buy")
+
 let HomeSection = document.getElementById("home")
 
+let phoneImage = document.getElementById("phone-image")
 let displaySection = document.getElementById("display")
 let chipsetSection = document.getElementById("chipset")
 let connectionSection = document.getElementById("connection")
@@ -9,20 +12,22 @@ let connectionSection = document.getElementById("connection")
 let cameraSection = document.getElementById("camera")
 let memoriaSection = document.getElementById("memoria")
 let freaturesSection = document.getElementById("freatures")
-let buyLink = document.getElementById("Buy")
-let phoneImage = document.getElementById("phone-image")
+
 
 function Home() {
     HomeSection.innerHTML = "Work in Progress Desktop version"
 
     /* Reset Window */
     displaySection.innerHTML = ""; chipsetSection.innerHTML = "";connectionSection.innerHTML = ""
-    cameraSection.innerHTML = "";memoriaSection.innerHTML = "";freaturesSection.innerHTML = ""; phoneImage.setAttribute("style", "background: none;")
+    cameraSection.innerHTML = "";memoriaSection.innerHTML = "";freaturesSection.innerHTML = ""; phoneImage.setAttribute("style", "background: none;");
+    buyLink.innerHTML = "";
+    DeviceList.classList.add ("device-off")
 
     /*Home Section */
 }
-window.addEventListener('load', Home())
+
 window.addEventListener("load", () => {
+    Home()
     let deviceList = `
     <p onclick="m52Specs()">Galaxy M52 5G</p>
     <p onclick="iphone12Specs()">Iphone 12 Pro Max</p>
@@ -36,19 +41,26 @@ window.addEventListener("load", () => {
 })
 
 function OpenMenu() {
+
     DeviceList.classList.toggle("open")
-    DevicesButton.setAttribute("style", "color: #6ca59a; border-bottom: 3px solid;border-color: #6ca59a;")
+    DevicesButton.setAttribute("style", "color: var(--background-color-1); border-bottom: 3px solid;border-color: var(--background-color-1);")
+}
+
+function deviceClassRemove() {
+    DeviceList.classList.remove ("device-off")
 }
 
 DeviceList.addEventListener("mouseleave", () => {
+
+
     DeviceList.classList.remove("open")
     DevicesButton.setAttribute("style", "default")
 })
 
 function m52Specs() {
+    deviceClassRemove()
     HomeSection.innerHTML = ""
     buyLink.innerHTML = `<a href="https://shop.samsung.com/br/galaxy-m52-5g/p?utm_source=google&utm_medium=ppc&utm_campaign=br_pd_ppc_google_galaxy-m52_ecommerce_cad1-a4422_text_opn-upb_paid-cdm-$none$-samsung%20m52&utm_content=none&utm_term=samsung%20m52&cid=br_pd_ppc_google_galaxy-m52_ecommerce_cad1-a4422_text_opn-upb_paid-cdm-$none$-samsung%20m52&keeplink=true" target="v_blank">Buy</a>`
-
     phoneImage.setAttribute("style", ` 
                                     width: 30rem;
                                     height:35rem;
@@ -60,9 +72,8 @@ function m52Specs() {
                                     background-clip: content-box;
                                     margin-left: -2rem;
                                     margin-top: 2rem;                                  
-                                     `)
-    
-   displaySection.innerHTML = `<h2>Display</h2>
+                                     `) 
+    displaySection.innerHTML = `<h2>Display</h2>
                                <p>6.7 Polegadas</p>
                                <p>1080x2400px</p>
                                <p>super AMOLED plus</p>
@@ -95,13 +106,11 @@ function m52Specs() {
                                   <p>Impressão Digital</p>
                                   <p>Bateria 5000maH</p>
                                   `
-
     DeviceList.classList.remove("open")
-
-    
 }
 
 function iphone12Specs() {
+    deviceClassRemove()
     HomeSection.innerHTML = ""
     buyLink.innerHTML = `<a href="https://www.pontofrio.com.br/iphone-12-pro-max-apple-128gb-grafite-tela-de-67-camera-tripla-de-12mp-ios-55014507/p/55014507?utm_medium=comparadorpreco&utm_source=zoom&utm_content=55014507&pid=zoom_int&c=zoomCPA&cm_mmc=zoom_XML-_-TELE-_-Comparador-_-55014507&idLojista=16&tipoLojista=1P&utm_campaign=4ad633a7534b4e38b9bc72b394c21d07" target="v_blank">Buy</a>`
     phoneImage.setAttribute("style", `
@@ -116,7 +125,6 @@ function iphone12Specs() {
                                 margin-left: 1rem;
                                 margin-top: 2rem;
                                 `)
-
     displaySection.innerHTML = `<h2>Display</h2>
                                  <p>6.7 Polegadas</p>
                                  <p>1284x2778px</p>
@@ -149,13 +157,11 @@ function iphone12Specs() {
                                    <p>Impressão Digital</p>
                                    <p>Bateria 3690maH</p>
                                    `
-
-    DeviceList.classList.remove("open")                              
-
-
+   DeviceList.classList.remove("open")                              
 }
 
 function iphone13Specs() {
+    deviceClassRemove()
     HomeSection.innerHTML = ""
     buyLink.innerHTML = `<a href="https://www.shoptime.com.br/produto/3919412473?epar=9381&s_term=COMPARADORES&hl=lower&utm_campaign=marca%3Ashop%3Bmidia%3Acomparadores%3Bformato%3A00%3Bsubformato%3A00%3Bidcampanha%3A9381&utm_source=zoom&utm_medium=comparadores&opn=COMPARADORES&utm_content=2e8e61fa62f14d928b22a88b2caac168&franq=2e8e61fa62f14d928b22a88b2caac168&cor=Prateado" target="v_blank">Buy</a>`
     phoneImage.setAttribute("style", `
@@ -170,7 +176,6 @@ function iphone13Specs() {
                                 margin-left: 1rem;
                                 margin-top: -5rem;
                                 `)
-
     displaySection.innerHTML = `<h2>Display</h2>
                                  <p>6.06 Polegadas</p>
                                  <p>1170x2532px</p>
@@ -203,13 +208,11 @@ function iphone13Specs() {
                                    <p>Dual Led</p>
                                    <p>Bateria 3095maH</p>
                                    `
-
-    DeviceList.classList.remove("open")                              
-
-
+    DeviceList.classList.remove("open")
 }
 
 function m4proSpecs() {
+    deviceClassRemove()
     HomeSection.innerHTML = ""
     buyLink.innerHTML = `<a href="https://www.amazon.com.br/Poco-Smartphone-128GB-Dual-azul/dp/B09LQGJ9LZ">Buy</a>`
     phoneImage.setAttribute("style", `
@@ -224,7 +227,6 @@ function m4proSpecs() {
                                 margin-left: 1rem;
                                 margin-top: 4rem;
                                 `)
-
     displaySection.innerHTML = `<h2>Display</h2>
                                  <p>6.6 Polegadas</p>
                                  <p>1080x2400px</p>
@@ -255,12 +257,11 @@ function m4proSpecs() {
                                    <p>Face Detection</p>
                                    <p>Bateria 5000maH</p>
                                    `
-
-    DeviceList.classList.remove("open") 
-
+    DeviceList.classList.remove("open")
 }
 
 function s22UltraSpecs() {
+    deviceClassRemove()
     HomeSection.innerHTML = ""
     buyLink.innerHTML = `<a href="https://www.magazineluiza.com.br/smartphone-samsung-galaxy-s22-ultra-256gb-vinho-5g-12gb-ram-68-cam-quadrupla-selfie-40mp/p/234440800/te/s21u/?&force=12&seller_id=magazineluiza" target="v_blank">Buy</a>`
     phoneImage.setAttribute("style", `
@@ -309,6 +310,7 @@ function s22UltraSpecs() {
 }
 
 function a52Specs() {
+    deviceClassRemove()
     HomeSection.innerHTML = ""
     buyLink.innerHTML = `<a href="https://www.fastshop.com.br/web/p/d/SGSMA525VLT_PRD/samsung-galaxy-a52-violeta-128gb-sm-a525mlvgzto-fast?partner=parceiro-comparador&utm_source=com_zoom&utm_medium=com&utm_campaign=PREMIUM&utm_term=SGSMA525VLT_PRD&cm_mmc=com_zoom-_-PREMIUM-_-ND-_-SGSMA525VLT_PRD&utm_content=cfc446405923492d998f268ed9f750f1" target="v_blank">Buy</a>`
     phoneImage.setAttribute("style", `
@@ -323,7 +325,6 @@ function a52Specs() {
                                 margin-left: -1rem;
                                 margin-top: 3rem;
                                 `)
-
     displaySection.innerHTML = `<h2>Display</h2>
                                  <p>6.5 Polegadas</p>
                                  <p>1080x2400px</p>
@@ -353,9 +354,6 @@ function a52Specs() {
                                    <p>Face Detection</p>
                                    <p>Bateria 4500maH</p>
                                    `
-
     DeviceList.classList.remove("open")                              
-
-
 }
 
