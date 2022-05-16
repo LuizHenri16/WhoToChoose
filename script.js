@@ -41,7 +41,6 @@ window.addEventListener("load", () => {
 })
 
 function OpenMenu() {
-
     DeviceList.classList.toggle("open")
     DevicesButton.setAttribute("style", "color: var(--background-color-1); border-bottom: 3px solid;border-color: var(--background-color-1);")
 }
@@ -51,8 +50,6 @@ function deviceClassRemove() {
 }
 
 DeviceList.addEventListener("mouseleave", () => {
-
-
     DeviceList.classList.remove("open")
     DevicesButton.setAttribute("style", "default")
 })
