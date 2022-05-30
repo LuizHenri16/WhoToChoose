@@ -44,7 +44,7 @@ body {
 }
 
 #logo {
-    margin-top: -1rem;
+    margin-top: -0.5rem;
 }
 
 #logo span {
@@ -55,6 +55,7 @@ body {
 #header .navigation ul {
     display: flex;
     font-size: 1.3rem;
+    padding: 1rem;
 }
 
 #header .navigation ul li a {

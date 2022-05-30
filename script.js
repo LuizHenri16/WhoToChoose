@@ -20,8 +20,11 @@ function Home() {
 
     /* Reset Window */
     displaySection.innerHTML = ""; chipsetSection.innerHTML = "";connectionSection.innerHTML = ""
-    cameraSection.innerHTML = "";memorySection.innerHTML = "";freaturesSection.innerHTML = ""; phoneImage.setAttribute("style", "background: none;");
+    cameraSection.innerHTML = "";memorySection.innerHTML = "";freaturesSection.innerHTML = ""; 
+    phoneImage.setAttribute("style", "background: none;");
+    
     buyLink.innerHTML = "";
+    
     DeviceList.classList.add ("device-off")
     DeviceList.classList.remove ("open")
     DevicesButton.setAttribute("style", "default")
