@@ -30,9 +30,6 @@ function Home() {
     HomeSection.innerHTML = `<div id='cards' class='cards'>
         <div class='section1'>
             <div id='card1' class='card' onclick="m52Specs()">Galaxy M52 5G</div> <div id='card2' class='card' onclick="iphone12Specs()">Iphone 12 Pro Max</div>   <div id='card3' onclick="iphone13Specs()" class='card'>Iphone 13 Pro</div>   <div id='card4' onclick="m4proSpecs()" class='card'>Xiaomi Poco M4 Pro 5G</div> 
-        </div>
-
-        <div class='section2'>
             <div id='card5' class='card'onclick="s22UltraSpecs()" >Galaxy S22 Ultra</div>   <div id='card6' onclick="x4proSpecs()" class='card'>Xiaomi Poco X4 Pro 5G</div>   <div id='card7' onclick="a52Specs()" class='card'>Galaxy A52</div>
         </div>
     </div>`
